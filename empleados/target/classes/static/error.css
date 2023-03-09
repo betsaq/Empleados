@@ -1,0 +1,14 @@
+/*ESTILOS PARA SECCION DE ERRORES*/
+.mensajeCodigo{
+    font-size: 50px;
+    position: absolute;
+    top: 40%;
+    left: 48.5%
+}
+.mensajeError{
+    font-size: 22px;
+    font-weight: 800;
+    position: absolute;
+    top: 50%;
+    left: 37.5%
+}

@@ -1,0 +1,61 @@
+body{
+    padding-top: 60px;
+    /*background-color: #15A26D;*/
+    background-image:  url("abstract_black.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width:100%;
+    height: 800px;
+
+}
+
+h1{
+    
+   font-family:Cambria;
+   font-weight:bold;
+   font-size: 3.0em ;
+   font-weight: '2';
+    
+    
+}
+
+.Bienvenida{
+/*    animation-name: bienvenida;
+    animation-duration: 2s;*/
+    font-family: sans-serif,cursive;
+    font-weight: 700;
+    text-align: center;
+    margin: initial;
+    padding: 10px;
+    padding-top: 100px;
+    color: white;
+}
+
+.boton-index{
+
+    padding: 52px 343px;
+    margin: 0 0 0 49px;
+
+}
+
+.header_border{
+    border-bottom: 1px solid #001921
+}
+
+/*@keyframes bienvenida{
+    0% {
+        transform: rotateZ(25deg);
+        transform: scale(1.5);
+    }
+
+    50% {
+        transform: rotateZ(-25deg);
+    }
+
+    100%{
+        transform: rotateZ(0deg);
+    }*/
+
+
+

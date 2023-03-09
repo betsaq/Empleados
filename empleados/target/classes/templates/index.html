@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head th:replace= "/fragments/head :: head" </head>
+    <header>  
+        <nav th:replace= "/fragments/navbar :: nav" </nav></nav>         
+</header>
+<body>
+
+
+    <div class="Bienvenida">
+        <h1>BIENVENIDO!!!</h1> 
+        <br> 
+        <h2 style="font-family: 'American Typewriter', serif">Aquí podrá llevar un registro de sus empleados </h2> 
+        <h2 style="font-family: 'American Typewriter', serif">Consulta sus datos personales y crea informes PDF y Excel</h2>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="boton-index">
+        <a class="boton-a" th:href="@{/empleado/crear}">NUEVO EMPLEADO</a>
+        <a class="boton-a" th:href="@{/empleado/listar}">LISTA DE EMPLEADOS</a>
+
+    </div>
+    <br><br><br>
+</body>
+<footer th:replace= "/fragments/footer :: footer" </footer>
+</html>
+
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html xmnls:th="http://www.thymeleaf.org" xmnls:sec="http://www.thymeleaf.org/extras/spring/spring-security">
+    <head th:replace= "/fragments/head :: head" ></head>
+
+    <body>
+
+
+
+
+        <div class="container-flex-empleado-listar">
+            <div class="tabla-empleado"  >
+                <div>
+                    <hr>
+                    <h2 class="titulo-lista">LISTA DE EMPLEADOS</h2>
+                    <hr>
+                    <table class="tabla" >
+                        <thead>
+                            <tr>
+
+                                <th id="titulos-listas" scope="col">Nombre</th>
+                                <th id="titulos-listas" scope="col">Apellido</th>
+                                <th id="titulos-listas" scope="col">Domicilio</th>
+                                <th id="titulos-listas" scope="col">CUIT</th>
+                                <th id="titulos-listas" scope="col">Email</th>
+                                <th id="titulos-listas" scope="col">Telefono</th>
+                                <!-- <th id="titulos-listas" scope="col">Sueldo</th>-->
+                                <th id="titulos-listas" scope="col">Editar</th>
+                                <th id="titulos-listas" scope="col">Eliminar</th>
+
+                            </tr>
+                        </thead>
+                        <tbody class="linea-lista" th:each="empleado : ${empleado}">
+                            <tr>
+
+                                <td id="contenido-lista" th:text="${empleado.nombre}"></td>
+                                <td id="contenido-lista" th:text="${empleado.apellido}"></td>
+                                <td id="contenido-lista" th:text="${empleado.domicilio}"></td>
+                                <td id="contenido-lista" th:text="${empleado.cuit}"></td>
+                                <td id="contenido-lista" th:text="${empleado.email}"></td>
+                                <td id="contenido-lista" th:text="${empleado.telefono}" href="https://wa.me/543513364508">
+                                    <!--                                    href="https://api.whatsapp.com/send?phone=${empleado.telefono}">-->
+                                </td>
+                                <!--<td id="contenido-lista" th:text="${empleado.sueldo}"></td>-->
+                                <td id="lista-links-tabla"><a class="links-lista" 
+                                                              th:href="@{/empleado/editar/__${empleado.id}__}">
+                                        <!--<span class="material-symbols-outlined">   edit </span> </a>-->
+                                      &#128394; </td>
+                                <td id="lista-links-tabla"><a class="links-lista" 
+                                                              onclick="return confirm('¿Estás seguro que deseas eliminar el empleado?');" 
+                                                              th:href="@{/empleado/eliminar/__${empleado.id}__}">
+                                        <!--<span class="material-symbols-outlined">delete</span></a>-->
+                                    &#128465; </td>
+                            </tr>
+                        </tbody>
+                    </table>     
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="boton-listar">
+                <a class="boton-a" th:href="@{/empleado/crear}">Crear Nuevo</a>
+                <a class="boton-a"th:href="@{/empleado/exportarPDF}">Reporte PDF</a>
+                <a class="boton-a"th:href="@{/empleado/exportarExcel}">Reporte Excel</a>
+                <a class="boton-a" th:href="@{/}">Volver</a>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+    </body>
+</html>

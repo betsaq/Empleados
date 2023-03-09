@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: inherit;
+}
+
+.header__superior{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    background: linear-gradient(to bottom,#a8a8a8, #d6d6d6, #dedede, #b7b7b7);
+
+}
+
+
+nav{
+
+    padding: 0px 0px 0px 1142px;
+    margin: -15px 0px 27px -1px;
+}
+
+a{
+    text-decoration: none;
+}
+svg{
+    width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,.4));
+}
+path {
+    fill: #006666;;
+    background-color: black;
+    box-shadow: 1px 1px 6px;
+    color: #fff;
+
+}
+
+svg:hover{
+    background-position: right center;
+    color: #006666;
+    text-decoration: none;  
+}
+
+

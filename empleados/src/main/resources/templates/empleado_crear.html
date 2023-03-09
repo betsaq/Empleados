@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmnls:th="http://www.thymeleaf.org" xmnls:sec="http://www.thymeleaf.org/extras/spring/spring-security">
+
+
+    <head th:replace= "/fragments/head :: head" ></head>
+
+    <body>
+           <div th:if="${error != null}" id="mensajeError"  class="container-flex-empleado">
+                <div class="card-body">
+                    <h5 class="titulo-seccion">ERROR</h5>
+                    <p class="boton-a" th:text="${error}"></p>
+                </div>
+            </div> 
+
+        <section class="container-flex-empleado">
+        
+            <div class="formulario" >
+
+                <h2 class="titulo-seccion">CREAR EMPLEADO</h2>
+                <form class="form"
+                      th:action="@{/empleado/creado}"
+                      method="POST"
+                      enctype="multipart/form-data"
+                      id="formu"
+                      >
+                    <div class="label">
+                        <label class="subtitulo-label">Nombre</label>
+                        <input
+                            type="text"
+                            class="form-input"
+                            name="nombre"
+                            placeholder="Ingresar Nombre"
+                            th:value="${nombre}"
+                            />
+                    </div>
+                    <div class="label">
+                        <label class="subtitulo-label">Apellido</label>
+                        <input
+                            type="text"
+                            class="form-input"
+                            name="apellido"
+                            placeholder="Ingresar apellido"
+                            th:value="${apellido}"
+                            />
+                    </div>
+                    <div class="label">
+                        <label class="subtitulo-label">Cuit</label>
+                        <input
+                            type="text"
+                            class="form-input"
+                            name="cuit"
+                            placeholder="ingresar cuit"
+                            th:value="${cuit}"
+                            />
+                    </div>
+                    <div class="label">
+                        <label class="subtitulo-label">Domicilio</label>
+                        <input
+                            type="text"
+                            class="form-input"
+                            name="domicilio"
+                            placeholder="Ingresar domicilio"
+                            th:value="${domicilio}"
+                            />
+                    </div>
+
+                    <div class="label">
+                        <label class="subtitulo-label">Telefono</label>
+                        <input
+                            type="text"
+                            class="form-input"
+                            name="telefono"
+                            placeholder="ingrese telefono"
+                            th:value="${telefono}"
+                            />
+                    </div>
+                    <div class="label">
+                        <label class="subtitulo-label">Email</label>
+                        <input
+                            type="text"
+                            class="form-input"
+                            name="email"
+                            placeholder="ingresar Email"
+                            th:value="${email}"
+                            />
+                    </div>
+
+                    <div class="label">
+                        <label class="subtitulo-label">Sueldo $</label>
+                        <input
+                            type="text"
+                            class="form-input"
+                            name="sueldo"
+                            placeholder="sueldo"
+                            th:value="${sueldo}"
+                            />
+                    </div>
+
+                    <br>
+                    <div class="boton-crear">
+
+                        <button type="submit" style="background:none;border:none; color:#006666"> <a class="boton-a">
+                                GUARDAR</a> </button>
+
+                        <button type="reset" style="background:none;border:none; color:#006666"> <a class="boton-a" th:href="@{/}"> VOLVER </a> </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+    </body>
+</html>

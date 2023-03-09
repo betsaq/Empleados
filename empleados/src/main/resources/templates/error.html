@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmnls:th="http://www.thymeleaf.org" xmnls:sec="http://www.thymeleaf.org/extras/spring/spring-security">
+
+
+    <head th:replace= "/fragments/head :: head" ></head>
+
+    <body>
+
+
+        <div>
+            <h1 class="mensajeCodigo" style="color:white" th:text="${codigo}" ></h1>
+            <h2 class="mensajeError" style="color:white" th:text="${mensaje}" ></h2>
+            <br>
+            <br>
+
+            <button type="reset" style="background:none;border:none; color:#006666"> <a class="boton-a" th:href="@{/}"> VOLVER </a> </button>
+
+        </div>
+
+    </body>
+</html>
